@@ -98,8 +98,9 @@ echo "### Configure Cloud Services ###"
 echo "################################"
 echo -ne '\n'
 
-curl_delete "$ELASTICSEARCH_URL/_snapshot/elastic-bytes/demo"
 curl_delete "$ELASTICSEARCH_URL/_snapshot/elastic-bytes"
+curl_delete "$ELASTICSEARCH_URL/demo-person"
+curl_delete "$ELASTICSEARCH_URL/_slm/policy/daily-bytes"
 
 echo -ne '\n'
 echo "#############################"
@@ -116,8 +117,7 @@ echo "#####################"
 echo -ne '\n'
 
 open "$KIBANA_URL/app/canvas/"
-open "$KIBANA_URL/app/dev_tools/"
-open "$KIBANA_URL/app//app/management/data/snapshot_restore/snapshots/"
+open "$KIBANA_URL/app/app/management/data/snapshot_restore/snapshots/"
 
 #echo "If not yet there, paste the following script in Dev Tools:"
 #cat elasticsearch-config/devtools-script.json

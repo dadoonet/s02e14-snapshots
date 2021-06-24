@@ -11,6 +11,12 @@ The setup will check that Elasticsearch and Kibana are running.
 
 It will also add Kibana Canvas slides.
 
+It will remove:
+
+* index `demo-person`
+* repository `elastic-bytes`
+* `daily-bytes` snapshot policy
+
 ### Run on cloud (recommended)
 
 Open your cloud deployment in the [cloud console](https://cloud.elastic.co/deployments) and 
@@ -93,7 +99,7 @@ As this will take a significant amount of time, we can look at policies in the m
 
 ![Kibana Snapshots Management](images/30-policy.png "Kibana Snapshots Management")
 
-Click on Create policy to create a new one named `daily-bytes`. As it's a demo, we want to run many snapshots in the next minutes, so we are choosing a timebased snapshot name pattern: `<demo-{now/m{yyyy.MM.dd.HH.mm.ss}}>`.
+Click on Create policy to create a new one named `daily-bytes`. As it's a demo, we want to run many snapshots in the next minutes, so we are choosing a timebased snapshot name pattern: `<demo-{now{HH.mm.ss}}>`.
 We will be using the `elastic-bytes` repository we created early on. The minimum schedule we can have is every 15 minutes so we are using `0 */15 * * * ?` cron expression.
 
 ![Kibana Snapshots Management](images/31-policy.png "Kibana Snapshots Management")
