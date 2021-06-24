@@ -75,7 +75,7 @@ We can click on Restore and select what we want to restore exactly.
 
 ![Kibana Snapshots Management](images/21-restore.png "Kibana Snapshots Management")
 
-We can also chnage some index settings.
+We can also change some index settings.
 
 ![Kibana Snapshots Management](images/22-restore.png "Kibana Snapshots Management")
 
