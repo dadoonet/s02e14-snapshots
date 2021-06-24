@@ -117,7 +117,7 @@ echo "#####################"
 echo -ne '\n'
 
 open "$KIBANA_URL/app/canvas/"
-open "$KIBANA_URL/app/app/management/data/snapshot_restore/snapshots/"
+open "$KIBANA_URL/app/management/data/snapshot_restore/snapshots/"
 
 #echo "If not yet there, paste the following script in Dev Tools:"
 #cat elasticsearch-config/devtools-script.json
